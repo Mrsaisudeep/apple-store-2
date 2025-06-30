@@ -1,0 +1,313 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> sai sudeep's Apple Store</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+            background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .hero {
+            background: url('568745f7-d4c0-48d0-8dbe-c634b597dd51.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background-blend-mode: overlay;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            background: linear-gradient(90deg, #0071e3, #005bb5);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .hero button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px;
+            justify-content: center;
+            background-color: #f8f9fa;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+        button {
+        background-color: #0066cc;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: block;
+        margin: 20px auto;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #005bb5;
+    }
+
+        .product-card button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: linear-gradient(90deg, #0071e3, #005bb5);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .product-card button:hover {
+            background: linear-gradient(90deg, #005bb5, #003e7e);
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body> 
+    <button onclick="fun()">Wishlist</button>
+    <div id="parent"></div>
+    <header>
+        <h1> SAI SUDEEP'S Apple Store</h1>
+        <nav>
+            <a href="#">Store</a>
+            <a href="#">Mac</a>
+            <a href="#">iPad</a>
+            <a href="#">iPhone</a>
+            <a href="#">Watch</a>
+            <a href="#">Support</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <div>
+            <h2>iPhone 15 Pro</h2>
+            <p>Pro. Beyond.</p>
+            <button onclick="learnMore()">Learn More</button>
+        </div>
+    </div>
+
+    <section class="products">
+        <!-- iPhone Section  -->
+        <div class="product-card">
+            <img src="img-8953_3uch.1248.webp" alt="iPhone 14 Pro">
+            <h3>iPhone 14 Pro</h3>
+            <p>A magical new way to interact with iPhone.</p>
+            <button onclick="addToCart('iPhone 14 Pro')">Add to Cart</button>
+            <button onclick="buyNow('iPhone 14 Pro')">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="apple-iphone-12pro-green (1).jpg" alt="iPhone 13">
+            <h3>iPhone 13</h3>
+            <p>As powerful as it is colorful.</p>
+            <button onclick="addToCart('iPhone 13')">Add to Cart</button>
+            <button onclick="buyNow('iPhone 13')">Buy Now</button>
+        </div>
+
+        <!-- iPad Section -->
+        <div class="product-card">
+            <img src="apple_ipad-pro-spring21_hero_04202021-H-2021-1618941973.webp" alt="iPad Pro">
+            <h3>iPad Pro</h3>
+            <p>Supercharged by the M2 chip.</p>
+            <button onclick="addToCart('iPad Pro')">Add to Cart</button>
+            <button onclick="buyNow('iPad Pro')">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="apple_ipad-pro-spring21_hero_04202021-H-2021-1618941973.webp" alt="iPad Air">
+            <h3>iPad Air</h3>
+            <p>Light. Bright. Full of might.</p>
+            <button onclick="addToCart('iPad Air')">Add to Cart</button>
+            <button onclick="buyNow('iPad Air')">Buy Now</button>
+        </div>
+
+        <!-- Mac Section -->
+        <div class="product-card">
+            <img src="photo-1717865499857-ec35ce6e65fa.avif" alt="MacBook Air">
+            <h3>MacBook Air</h3>
+            <p>Supercharged by M2.</p>
+            <button onclick="addToCart('MacBook Air')">Add to Cart</button>
+            <button onclick="buyNow('MacBook Air')">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="photo-1717865499857-ec35ce6e65fa.avif" alt="MacBook Pro">
+            <h3>MacBook Pro</h3>
+            <p>Pro power meets pro portability.</p>
+            <button onclick="addToCart('MacBook Pro')">Add to Cart</button>
+            <button onclick="buyNow('MacBook Pro')">Buy Now</button>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SAI SUDEEP. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function learnMore() {
+            alert('Discover the all-new iPhone 15 Pro!');
+        }
+
+        function addToCart(product) {
+            alert(product + ' has been added to your cart!');
+        }
+
+        function buyNow(product) {
+            alert('Redirecting to purchase ' + product + '...');
+        }        
+        parent=document.getElementById('parent')
+      emparr=[]
+
+      let newdata=data.map(function(val){
+          child=document.createElement('div')
+          childa=document.createElement('div')
+          childb=document.createElement('div')
+          childc=document.createElement('div')
+          childd=document.createElement('div')
+          img=document.createElement('img')
+          btn=document.createElement('button')
+          btn.innerText='Add to cart'
+          
+          
+          btn.addEventListener('click',function(){
+            console.log(val)
+            emparr.push(val)
+            
+            localStorage.setItem('wishlist',JSON.stringify(emparr))
+            
+          })
+          
+          img.src=val.image
+          childa.innerText=val.id
+          childb.innerText=val.title
+          childc.innerText=val.price
+          childd.innerText=val.category
+          
+          child.append(img,childa,childb,childc,childd,btn)
+          parent.append(child)
+        })
+        function fun(){
+            window.open('wishlist.html','_self')
+        }    
+    </script>
+</body>
+</html> 
+<!-- tguhggu gu ugerg gnbbug uygnrguh gb gun the dsu fgg f 
+ rgh  huregb erhg esdu  gtguh rgh Aughrtgj ri obo Ohh w wer uubr ]
+ 1420
+ bbuun rgj  jgtrh jvnnbjg   refnbguh
+ hvhf  ofbvif er rfyf  which be either be the same for the cast by the  process of an excuite 
+ moreover the theet may be the differbnt by the window . That can be the same by the process by the 
+ excuite by the system by the end else  and ve3ltoage by the come by the end by usingf HTML -->
